@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Producto 66",
+    "description": "Probando con otro",
+    "code": "666",
+    "price": 1000,
+    "status": true,
+    "stock": 50,
+    "category": "Categoría 66",
+    "thumbnails": [
+      "img1.jpg",
+      "img2.jpg"
+    ],
+    "id": 2
+  },
+  {
+    "title": "Producto 88",
+    "description": "Otra prueba",
+    "code": "8888",
+    "price": 18888,
+    "status": true,
+    "stock": 88,
+    "category": "Categoría 88",
+    "thumbnails": [
+      "img1.jpg",
+      "img2.jpg"
+    ],
+    "id": 3
+  }
+]
