@@ -1,30 +1,133 @@
 [
   {
-    "title": "Producto 66",
-    "description": "Probando con otro",
-    "code": "666",
-    "price": 1000,
-    "status": true,
-    "stock": 50,
-    "category": "Categoría 66",
-    "thumbnails": [
-      "img1.jpg",
-      "img2.jpg"
-    ],
-    "id": 2
+    "title": "aerosol",
+    "description": "quinta",
+    "code": "123",
+    "price": "1200",
+    "stock": "50",
+    "category": "desodorante"
   },
   {
-    "title": "Producto 88",
-    "description": "Otra prueba",
-    "code": "8888",
-    "price": 18888,
-    "status": true,
-    "stock": 88,
-    "category": "Categoría 88",
-    "thumbnails": [
-      "img1.jpg",
-      "img2.jpg"
-    ],
-    "id": 3
+    "title": "aerosol",
+    "description": "quinta",
+    "code": "123",
+    "price": "1200",
+    "stock": "50",
+    "category": "desodorante"
+  },
+  {
+    "title": "aerosol",
+    "description": "quinta",
+    "code": "123",
+    "price": "1200",
+    "stock": "50",
+    "category": "desodorante"
+  },
+  {
+    "title": "aerosol",
+    "description": "quinta",
+    "code": "123",
+    "price": "1200",
+    "stock": "50",
+    "category": "desodorante"
+  },
+  {
+    "title": "aerosol",
+    "description": "quinta",
+    "code": "123",
+    "price": "1200",
+    "stock": "50",
+    "category": "desodorante"
+  },
+  {
+    "title": "aerosol",
+    "description": "quinta",
+    "code": "123",
+    "price": "1200",
+    "stock": "50",
+    "category": "desodorante"
+  },
+  {
+    "title": "aerosol",
+    "description": "quinta",
+    "code": "123",
+    "price": "1200",
+    "stock": "50",
+    "category": "desodorante"
+  },
+  {
+    "title": "aerosol",
+    "description": "quinta",
+    "code": "123",
+    "price": "1200",
+    "stock": "50",
+    "category": "desodorante"
+  },
+  {
+    "title": "aerosol",
+    "description": "quinta",
+    "code": "123",
+    "price": "1200",
+    "stock": "50",
+    "category": "desodorante"
+  },
+  {
+    "title": "aerosol",
+    "description": "quinta",
+    "code": "123",
+    "price": "1200",
+    "stock": "50",
+    "category": "desodorante"
+  },
+  {
+    "title": "aerosol",
+    "description": "quinta",
+    "code": "123",
+    "price": "1200",
+    "stock": "50",
+    "category": "desodorante"
+  },
+  {
+    "title": "aerosol",
+    "description": "quinta",
+    "code": "123",
+    "price": "1200",
+    "stock": "50",
+    "category": "desodorante"
+  },
+  {
+    "title": "aerosol",
+    "description": "quinta",
+    "code": "123",
+    "price": "1200",
+    "stock": "50",
+    "category": "desodorante"
+  },
+  {
+    "title": "aerosol",
+    "description": "quinta",
+    "code": "123",
+    "price": "1200",
+    "stock": "50",
+    "category": "hola hola",
+    "id": null
+  },
+  {
+    "title": "casa",
+    "description": "hola",
+    "code": "789",
+    "price": "1800",
+    "stock": "80",
+    "category": "hola hola",
+    "id": 1
+  },
+  {
+    "title": "back",
+    "description": "end",
+    "code": "654",
+    "price": "456",
+    "stock": "999",
+    "category": "chau chau",
+    "id": 2
   }
 ]
