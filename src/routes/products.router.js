@@ -3,11 +3,36 @@ import ProductManager from '../services/ProductManager.js';
 
 const router = Router();
 const productManager = new ProductManager('./src/data/productos.json');
-
 router.get('/', async (req, res) => {
-  const products = await productManager.getAll();
-  res.json(products);
+  const { limit = 10, page = 1, sort, query } = req.query;
+  try {
+    const filter = query ? { category: query } : {};
+    const options = {
+      limit: parseInt(limit),
+      page: parseInt(page),
+      sort: sort ? { price: sort === 'asc' ? 1 : -1 } : {},
+    };
+    const products = await Product.paginate(filter, options);
+    res.json({
+      status: 'success',
+      payload: products.docs,
+      totalPages: products.totalPages,
+      prevPage: products.hasPrevPage ? products.page - 1 : null,
+      nextPage: products.hasNextPage ? products.page + 1 : null,
+      page: products.page,
+      hasPrevPage: products.hasPrevPage,
+      hasNextPage: products.hasNextPage,
+      prevLink: products.hasPrevPage ? `/products?page=${products.page - 1}` : null,
+      nextLink: products.hasNextPage ? `/products?page=${products.page + 1}` : null,
+    });
+  } catch (error) {
+    res.status(500).json({ status: 'error', message: error.message });
+  }
 });
+// router.get('/', async (req, res) => {
+//   const products = await productManager.getAll();
+//   res.json(products);
+// });
 
 router.get('/:pid', async (req, res) => {
   try {

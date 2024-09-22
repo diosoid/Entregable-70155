@@ -11,19 +11,26 @@ import cartRouter from './routes/carts.router.js';
 import viewsRouter from './routes/views.router.js';
 import ProductManager from './services/ProductManager.js';
 
-
-
+import mongoose from 'mongoose';
 
 const app = express();
 const httpServer = createServer(app);
 const io = new Server(httpServer);
 
+const mongoURI = 'mongodb://localhost:27017/EntregaFinal';
+mongoose.connect(mongoURI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+.then(() => console.log('Conectado a MongoDB'))
+.catch(err => console.error('Error al conectar a MongoDB', err));
+
 app.set('views', path.join(__dirname, 'views'));
+
 const productManager = new ProductManager('./src/data/productos.json');
 
 app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
-
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

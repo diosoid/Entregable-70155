@@ -23,4 +23,47 @@ router.post('/:cid/product/:pid', async (req, res) => {
   res.json(updatedCart);
 });
 
+router.delete('/:cid/products/:pid', async (req, res) => {
+  const { cid, pid } = req.params;
+  try {
+    const cart = await CartManager.deleteProduct(cid, pid);
+    res.json(cart);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
+router.put('/:cid', async (req, res) => {
+  const { cid } = req.params;
+  const { products } = req.body;
+  try {
+    const cart = await CartManager.updateCart(cid, products);
+    res.json(cart);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+router.put('/:cid/products/:pid', async (req, res) => {
+  const { cid, pid } = req.params;
+  const { quantity } = req.body;
+  try {
+    const cart = await CartManager.updateProductQuantity(cid, pid, quantity);
+    res.json(cart);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+router.delete('/:cid', async (req, res) => {
+  const { cid } = req.params;
+  try {
+    const cart = await CartManager.clearCart(cid);
+    res.json(cart);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+
+
 export default router;
