@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
       page: parseInt(page),
       sort: sort ? { price: sort === 'asc' ? 1 : -1 } : {},
     };
-    const products = await Product.paginate(filter, options);
+    const products = await Product.paginate(filter, options).lean();
     res.json({
       status: 'success',
       payload: products.docs,

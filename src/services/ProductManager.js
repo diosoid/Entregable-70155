@@ -21,7 +21,7 @@ class ProductManager {
   // Método para obtener todos los productos
   async getAll() {
     try {
-      const products = await Product.find(); // Obtener todos los productos de MongoDB
+      const products = await Product.find().lean(); // Obtener todos los productos de MongoDB
       return products;
     } catch (error) {
       console.error('Error al obtener los productos:', error);

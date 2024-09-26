@@ -21,7 +21,7 @@ class CartManager {
 // Método para obtener un carrito por su ID
 async getCartById(cartId) {
     try {
-        const cart = await Cart.findById(cartId).populate('products.product'); // Obtener carrito y popular productos
+        const cart = await Cart.findById(cartId).populate('products.product').lean(); // Obtener carrito y popular productos
         return cart;
     } catch (error) {
         console.error('Error al obtener el carrito:', error);
